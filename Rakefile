@@ -19,12 +19,17 @@ require 'libmatty'
 task :default => 'spec:run'
 
 PROJ.name = 'libmatty'
-PROJ.authors = 'FIXME (who is writing this software)'
-PROJ.email = 'FIXME (your e-mail)'
-PROJ.url = 'FIXME (project homepage)'
+PROJ.ignore_file = '.gitignore'
+PROJ.authors = 'Matasano Security, LLC'
+PROJ.email = 'td@matasano.com'
+PROJ.description = 'Stanard Matasano extensions library for ruby'
+PROJ.url = 'http://github.com/tduehr/libmatty/tree/master'
 PROJ.version = Libmatty::VERSION
-PROJ.rubyforge.name = 'libmatty'
+# PROJ.rubyforge.name = 'libmatty'
 
 PROJ.spec.opts << '--color'
+
+PROJ.rdoc.opts << '--inline-source'
+PROJ.rdoc.opts << '--line-numbers'
 
 # EOF
