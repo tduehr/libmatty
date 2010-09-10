@@ -25,6 +25,11 @@ class Object
       def mymethods
         (self.methods - self.class.superclass.methods).sort
       end
+      
+      def tap
+        yield self
+        self
+      end
     end
     include ObjectExtensions
 end

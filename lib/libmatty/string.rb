@@ -88,6 +88,7 @@ class String
                     sio.write(" ") if i == 7
                 end
 
+                sio.write("-- " * (pad%8).tap{|x| pad -= x} + ' ') if pad > 8
                 sio.write("-- " * pad) if pad > 0
                 sio.write(" |#{ pbuf }|\n")
             end
@@ -128,7 +129,7 @@ class String
           end
         end
         
-        if not String.instance_methods.include?(:starts_with?)
+        if not String.instance_methods.include?(:ends_with?)
           def ends_with? x
               self[-(x.size)..-1] == x
           end
